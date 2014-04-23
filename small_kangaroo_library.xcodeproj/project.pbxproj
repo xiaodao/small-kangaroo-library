@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD845030A183CB8FCCBAB1DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84519567BBA2F7D563F107 /* Foundation.framework */; };
+		BD845308E3EAC54BD22957B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8454309F5B0D853027C810 /* AppDelegate.m */; };
+		BD8454F11CD5727CE763AE54 /* small_kangaroo_libraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845E26717604299EB03F72 /* small_kangaroo_libraryTests.m */; };
+		BD845570B556CC337218730C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD84587E1C770EF7EF9224F3 /* main.m */; };
+		BD8455BB7595EB994FD48145 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84546B6AEA7C7B33110CEA /* CoreGraphics.framework */; };
+		BD8456B2161CF02F90BD78B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD84594B611A31D067A27C40 /* InfoPlist.strings */; };
+		BD845721273A6D0AD019525B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8457303D9F4958DB3C1BC6 /* XCTest.framework */; };
+		BD84579DD0DB30A20A7A7CE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD8451F56298611FA9C866D1 /* InfoPlist.strings */; };
+		BD845A7DA90663160B7656D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84530631718BEF289A40D3 /* UIKit.framework */; };
+		BD845AC09A4064C057938681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84519567BBA2F7D563F107 /* Foundation.framework */; };
+		BD845E992071FD4047520B76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84530631718BEF289A40D3 /* UIKit.framework */; };
+		BD845FC75CAEC3DC37E87FA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8458B02638F00BBDDDB8CD /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD84546741CD8528F01928B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD845CCFC1D0B5F38D1DC1EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD845809F299CC448CAA0384;
+			remoteInfo = small_kangaroo_library;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD845190C8373CD2DDA6414D /* small_kangaroo_library-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "small_kangaroo_library-Info.plist"; sourceTree = "<group>"; };
+		BD84519567BBA2F7D563F107 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BD84530631718BEF289A40D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BD8454309F5B0D853027C810 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BD84543BF90F5199F1052BB2 /* small_kangaroo_libraryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "small_kangaroo_libraryTests-Info.plist"; sourceTree = "<group>"; };
+		BD84546B6AEA7C7B33110CEA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BD8457303D9F4958DB3C1BC6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BD84587E1C770EF7EF9224F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BD8458B02638F00BBDDDB8CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BD8458DF347904F85E5E6517 /* small_kangaroo_libraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = small_kangaroo_libraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD845D85CEB6F8AE95588365 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BD845DC8AF84EE5C1F9337EA /* small_kangaroo_library-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "small_kangaroo_library-Prefix.pch"; sourceTree = "<group>"; };
+		BD845DE5283E4347D671F7AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BD845DFD16CAD467CEB6D084 /* small_kangaroo_library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = small_kangaroo_library.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD845E26717604299EB03F72 /* small_kangaroo_libraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = small_kangaroo_libraryTests.m; sourceTree = "<group>"; };
+		BD845F5AD437C53E17D033B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD84550CB9BE82E56E1A0E6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD845AC09A4064C057938681 /* Foundation.framework in Frameworks */,
+				BD8455BB7595EB994FD48145 /* CoreGraphics.framework in Frameworks */,
+				BD845A7DA90663160B7656D7 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD8458274B5C12D3D7B11361 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD845721273A6D0AD019525B /* XCTest.framework in Frameworks */,
+				BD845030A183CB8FCCBAB1DD /* Foundation.framework in Frameworks */,
+				BD845E992071FD4047520B76 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD8450393BD0081CC7614ADC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD845DFD16CAD467CEB6D084 /* small_kangaroo_library.app */,
+				BD8458DF347904F85E5E6517 /* small_kangaroo_libraryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD8452BF264C7333CF2206D0 /* small_kangaroo_library */ = {
+			isa = PBXGroup;
+			children = (
+				BD845C3B452356122CF3B151 /* Supporting Files */,
+				BD845F5AD437C53E17D033B3 /* AppDelegate.h */,
+				BD8454309F5B0D853027C810 /* AppDelegate.m */,
+				BD8458B02638F00BBDDDB8CD /* Images.xcassets */,
+			);
+			path = small_kangaroo_library;
+			sourceTree = "<group>";
+		};
+		BD8453D35F0B7C4C45486C4D /* small_kangaroo_libraryTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD845A189CECC73CE1B91D16 /* Supporting Files */,
+				BD845E26717604299EB03F72 /* small_kangaroo_libraryTests.m */,
+			);
+			path = small_kangaroo_libraryTests;
+			sourceTree = "<group>";
+		};
+		BD845A189CECC73CE1B91D16 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD84543BF90F5199F1052BB2 /* small_kangaroo_libraryTests-Info.plist */,
+				BD8451F56298611FA9C866D1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD845A4E724529754889AE3E = {
+			isa = PBXGroup;
+			children = (
+				BD8450393BD0081CC7614ADC /* Products */,
+				BD845DAB04DE766AE4FB10D1 /* Frameworks */,
+				BD8452BF264C7333CF2206D0 /* small_kangaroo_library */,
+				BD8453D35F0B7C4C45486C4D /* small_kangaroo_libraryTests */,
+			);
+			sourceTree = "<group>";
+		};
+		BD845C3B452356122CF3B151 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD845190C8373CD2DDA6414D /* small_kangaroo_library-Info.plist */,
+				BD84594B611A31D067A27C40 /* InfoPlist.strings */,
+				BD84587E1C770EF7EF9224F3 /* main.m */,
+				BD845DC8AF84EE5C1F9337EA /* small_kangaroo_library-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD845DAB04DE766AE4FB10D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD84519567BBA2F7D563F107 /* Foundation.framework */,
+				BD84546B6AEA7C7B33110CEA /* CoreGraphics.framework */,
+				BD84530631718BEF289A40D3 /* UIKit.framework */,
+				BD8457303D9F4958DB3C1BC6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD84516AFC06973BCD50C933 /* small_kangaroo_libraryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD845BECB9F185C6C3063990 /* Build configuration list for PBXNativeTarget "small_kangaroo_libraryTests" */;
+			buildPhases = (
+				BD845CEF573B0E789EA54340 /* Sources */,
+				BD8458274B5C12D3D7B11361 /* Frameworks */,
+				BD84586EAAEAF373E112DFD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD8451425BA7DD55E60FC81B /* PBXTargetDependency */,
+			);
+			name = small_kangaroo_libraryTests;
+			productName = small_kangaroo_libraryTests;
+			productReference = BD8458DF347904F85E5E6517 /* small_kangaroo_libraryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BD845809F299CC448CAA0384 /* small_kangaroo_library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD8453BFA561E4A938648128 /* Build configuration list for PBXNativeTarget "small_kangaroo_library" */;
+			buildPhases = (
+				BD845D76D6E59376EB20B34E /* Sources */,
+				BD84550CB9BE82E56E1A0E6B /* Frameworks */,
+				BD8452AB2F19F3369C24BA4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = small_kangaroo_library;
+			productName = small_kangaroo_library;
+			productReference = BD845DFD16CAD467CEB6D084 /* small_kangaroo_library.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD845CCFC1D0B5F38D1DC1EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = SmallKangarooLibrary;
+			};
+			buildConfigurationList = BD84512753721910F29FD0A6 /* Build configuration list for PBXProject "small_kangaroo_library" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BD845A4E724529754889AE3E;
+			productRefGroup = BD8450393BD0081CC7614ADC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD845809F299CC448CAA0384 /* small_kangaroo_library */,
+				BD84516AFC06973BCD50C933 /* small_kangaroo_libraryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD8452AB2F19F3369C24BA4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD8456B2161CF02F90BD78B9 /* InfoPlist.strings in Resources */,
+				BD845FC75CAEC3DC37E87FA1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD84586EAAEAF373E112DFD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD84579DD0DB30A20A7A7CE2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD845CEF573B0E789EA54340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD8454F11CD5727CE763AE54 /* small_kangaroo_libraryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD845D76D6E59376EB20B34E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD845570B556CC337218730C /* main.m in Sources */,
+				BD845308E3EAC54BD22957B6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD8451425BA7DD55E60FC81B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD845809F299CC448CAA0384 /* small_kangaroo_library */;
+			targetProxy = BD84546741CD8528F01928B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD8451F56298611FA9C866D1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD845DE5283E4347D671F7AC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BD84594B611A31D067A27C40 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD845D85CEB6F8AE95588365 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD84505F28E6C53AC47B6C83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD845681EF0119945BAEA1DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "small_kangaroo_library/small_kangaroo_library-Prefix.pch";
+				INFOPLIST_FILE = "small_kangaroo_libraryTests/small_kangaroo_libraryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		BD8459775EE0B19CDDA3E1B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "small_kangaroo_library/small_kangaroo_library-Prefix.pch";
+				INFOPLIST_FILE = "small_kangaroo_library/small_kangaroo_library-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BD845A288BDF0821BDBCABCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "small_kangaroo_library/small_kangaroo_library-Prefix.pch";
+				INFOPLIST_FILE = "small_kangaroo_library/small_kangaroo_library-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BD845EAD55AAB61B043FCA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BD845F350C5540D0A79312BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "small_kangaroo_library/small_kangaroo_library-Prefix.pch";
+				INFOPLIST_FILE = "small_kangaroo_libraryTests/small_kangaroo_libraryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD84512753721910F29FD0A6 /* Build configuration list for PBXProject "small_kangaroo_library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD84505F28E6C53AC47B6C83 /* Release */,
+				BD845EAD55AAB61B043FCA26 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD8453BFA561E4A938648128 /* Build configuration list for PBXNativeTarget "small_kangaroo_library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD845A288BDF0821BDBCABCF /* Release */,
+				BD8459775EE0B19CDDA3E1B1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BD845BECB9F185C6C3063990 /* Build configuration list for PBXNativeTarget "small_kangaroo_libraryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD845681EF0119945BAEA1DC /* Release */,
+				BD845F350C5540D0A79312BD /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD845CCFC1D0B5F38D1DC1EA /* Project object */;
+}

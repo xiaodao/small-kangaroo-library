@@ -1,0 +1,38 @@
+# Xcode
+build/*
+!default.xcworkspace
+!project.xcworkspace
+small_kangaroo_library.xcodeproj/project.xcworkspace/xcuserdata
+small_kangaroo_library.xcodeproj/xcuserdata
+small_kangaroo_library.xcworkspace/xcuserdata
+small_kangaroo_library.xcworkspace/xcshareddata/small_kangaroo_library.xccheckout
+
+# Artifacts
+*.dSYM.zip
+*.ipa
+*.log
+*.out
+*.tar.gz
+
+# Pods
+Pods
+
+# Tests
+tests
+coverage.zip
+compile_commands.json
+coverage.info
+output
+integration/tmp
+
+# OS X
+.DS_Store
+
+# Idea Products
+.idea
+
+# Vim
+tags
+
+# Instruments
+*.trace
