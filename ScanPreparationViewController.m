@@ -7,6 +7,7 @@
 //
 
 #import "ScanPreparationViewController.h"
+#import "ScanViewController.h"
 
 @interface ScanPreparationViewController ()
 
@@ -35,4 +36,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)scan:(id)sender {
+  ScanViewController *scanViewController = [[ScanViewController alloc] init];
+  [self.navigationController presentViewController:scanViewController animated:NO completion:^{}];
+}
 @end

@@ -10,4 +10,6 @@
 
 @interface ScanPreparationViewController : UIViewController
 
+- (IBAction)scan:(id)sender;
+
 @end
