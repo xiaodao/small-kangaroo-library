@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39243D3F19091A4A00F25B7C /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39243D3E19091A4A00F25B7C /* ScanViewController.xib */; };
-		39243D4319091A8300F25B7C /* ScanPreparationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39243D4119091A8300F25B7C /* ScanPreparationViewController.m */; };
-		39243D4419091A8300F25B7C /* ScanPreparationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39243D4219091A8300F25B7C /* ScanPreparationViewController.xib */; };
-		39C1F3691907F62E00819F20 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C1F3671907F62E00819F20 /* ScanViewController.m */; };
+		3686730D76D84BF300F20DFD /* ScanPreparationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */; };
+		3686731F9DD7A62AC22C16B6 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A58CC24F0CF460A0D32 /* ScanViewController.m */; };
+		368679B178D94CBCE579FD8A /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3686755FBA6408D216E0CB38 /* ScanViewController.xib */; };
+		36867E85E10E738930C56BF3 /* ScanPreparationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */; };
 		BD845030A183CB8FCCBAB1DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84519567BBA2F7D563F107 /* Foundation.framework */; };
 		BD845308E3EAC54BD22957B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8454309F5B0D853027C810 /* AppDelegate.m */; };
 		BD8454F11CD5727CE763AE54 /* small_kangaroo_libraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845E26717604299EB03F72 /* small_kangaroo_libraryTests.m */; };
@@ -36,12 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		39243D3E19091A4A00F25B7C /* ScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = SOURCE_ROOT; };
-		39243D4019091A8300F25B7C /* ScanPreparationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanPreparationViewController.h; sourceTree = SOURCE_ROOT; };
-		39243D4119091A8300F25B7C /* ScanPreparationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanPreparationViewController.m; sourceTree = SOURCE_ROOT; };
-		39243D4219091A8300F25B7C /* ScanPreparationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanPreparationViewController.xib; sourceTree = SOURCE_ROOT; };
-		39C1F3661907F62E00819F20 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScanViewController.h; path = small_kangaroo_library/ScanViewController.h; sourceTree = SOURCE_ROOT; };
-		39C1F3671907F62E00819F20 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScanViewController.m; path = small_kangaroo_library/ScanViewController.m; sourceTree = SOURCE_ROOT; };
+		3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanPreparationViewController.xib; sourceTree = "<group>"; };
+		3686755FBA6408D216E0CB38 /* ScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
+		36867A1690C7F3003B9BCA30 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanPreparationViewController.m; sourceTree = "<group>"; };
+		36867A58CC24F0CF460A0D32 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		36867E4697848EC53A5FC29F /* ScanPreparationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanPreparationViewController.h; sourceTree = "<group>"; };
 		BD845190C8373CD2DDA6414D /* small_kangaroo_library-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "small_kangaroo_library-Info.plist"; sourceTree = "<group>"; };
 		BD84519567BBA2F7D563F107 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD84530631718BEF289A40D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -136,12 +136,12 @@
 		BD845C3398F345676D46202F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				39C1F3661907F62E00819F20 /* ScanViewController.h */,
-				39C1F3671907F62E00819F20 /* ScanViewController.m */,
-				39243D3E19091A4A00F25B7C /* ScanViewController.xib */,
-				39243D4019091A8300F25B7C /* ScanPreparationViewController.h */,
-				39243D4119091A8300F25B7C /* ScanPreparationViewController.m */,
-				39243D4219091A8300F25B7C /* ScanPreparationViewController.xib */,
+				36867E4697848EC53A5FC29F /* ScanPreparationViewController.h */,
+				36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */,
+				3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */,
+				36867A1690C7F3003B9BCA30 /* ScanViewController.h */,
+				36867A58CC24F0CF460A0D32 /* ScanViewController.m */,
+				3686755FBA6408D216E0CB38 /* ScanViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -213,6 +213,11 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = SmallKangarooLibrary;
+				TargetAttributes = {
+					BD845809F299CC448CAA0384 = {
+						DevelopmentTeam = H49XAA53D6;
+					};
+				};
 			};
 			buildConfigurationList = BD84512753721910F29FD0A6 /* Build configuration list for PBXProject "small_kangaroo_library" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -237,10 +242,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39243D3F19091A4A00F25B7C /* ScanViewController.xib in Resources */,
-				39243D4419091A8300F25B7C /* ScanPreparationViewController.xib in Resources */,
 				BD8456B2161CF02F90BD78B9 /* InfoPlist.strings in Resources */,
 				BD845FC75CAEC3DC37E87FA1 /* Images.xcassets in Resources */,
+				3686730D76D84BF300F20DFD /* ScanPreparationViewController.xib in Resources */,
+				368679B178D94CBCE579FD8A /* ScanViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,9 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD845570B556CC337218730C /* main.m in Sources */,
-				39C1F3691907F62E00819F20 /* ScanViewController.m in Sources */,
 				BD845308E3EAC54BD22957B6 /* AppDelegate.m in Sources */,
-				39243D4319091A8300F25B7C /* ScanPreparationViewController.m in Sources */,
+				36867E85E10E738930C56BF3 /* ScanPreparationViewController.m in Sources */,
+				3686731F9DD7A62AC22C16B6 /* ScanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -356,10 +361,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "small_kangaroo_library/small_kangaroo_library-Prefix.pch";
 				INFOPLIST_FILE = "small_kangaroo_library/small_kangaroo_library-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D6BDAD4F-5E2D-4015-B6C5-DE52250D8DA9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -369,10 +377,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "small_kangaroo_library/small_kangaroo_library-Prefix.pch";
 				INFOPLIST_FILE = "small_kangaroo_library/small_kangaroo_library-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D6BDAD4F-5E2D-4015-B6C5-DE52250D8DA9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -409,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
