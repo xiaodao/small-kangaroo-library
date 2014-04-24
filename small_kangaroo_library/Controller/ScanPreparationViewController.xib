@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -14,13 +14,20 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scan_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="nSf-fF-JD0">
-                    <rect key="frame" x="52" y="361" width="216" height="148"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="nSf-fF-JD0">
+                    <rect key="frame" x="52" y="356" width="216" height="148"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="216" id="aK0-w0-aB3"/>
+                        <constraint firstAttribute="height" constant="148" id="ivg-dr-off"/>
+                    </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcw-Yd-oxH">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcw-Yd-oxH">
                     <rect key="frame" x="105" y="514" width="110" height="54"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="1rJ-Cd-evh"/>
+                    </constraints>
                     <state key="normal" title="Button" image="scan_button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -30,6 +37,13 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="lcw-Yd-oxH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="105" id="9cp-ay-wLO"/>
+                <constraint firstAttribute="bottom" secondItem="lcw-Yd-oxH" secondAttribute="bottom" id="IPF-Lt-qng"/>
+                <constraint firstAttribute="trailing" secondItem="lcw-Yd-oxH" secondAttribute="trailing" constant="105" id="RXy-Xf-Fua"/>
+                <constraint firstItem="lcw-Yd-oxH" firstAttribute="top" secondItem="nSf-fF-JD0" secondAttribute="bottom" constant="10" id="ZOo-C7-o8K"/>
+                <constraint firstItem="nSf-fF-JD0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="52" id="cDK-cJ-ImD"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
