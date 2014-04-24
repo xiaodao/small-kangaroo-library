@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39243D3F19091A4A00F25B7C /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39243D3E19091A4A00F25B7C /* ScanViewController.xib */; };
+		39243D4319091A8300F25B7C /* ScanPreparationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39243D4119091A8300F25B7C /* ScanPreparationViewController.m */; };
+		39243D4419091A8300F25B7C /* ScanPreparationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39243D4219091A8300F25B7C /* ScanPreparationViewController.xib */; };
+		39C1F3691907F62E00819F20 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C1F3671907F62E00819F20 /* ScanViewController.m */; };
 		BD845030A183CB8FCCBAB1DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84519567BBA2F7D563F107 /* Foundation.framework */; };
 		BD845308E3EAC54BD22957B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8454309F5B0D853027C810 /* AppDelegate.m */; };
 		BD8454F11CD5727CE763AE54 /* small_kangaroo_libraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845E26717604299EB03F72 /* small_kangaroo_libraryTests.m */; };
@@ -32,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39243D3E19091A4A00F25B7C /* ScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = SOURCE_ROOT; };
+		39243D4019091A8300F25B7C /* ScanPreparationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanPreparationViewController.h; sourceTree = SOURCE_ROOT; };
+		39243D4119091A8300F25B7C /* ScanPreparationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanPreparationViewController.m; sourceTree = SOURCE_ROOT; };
+		39243D4219091A8300F25B7C /* ScanPreparationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanPreparationViewController.xib; sourceTree = SOURCE_ROOT; };
+		39C1F3661907F62E00819F20 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScanViewController.h; path = small_kangaroo_library/ScanViewController.h; sourceTree = SOURCE_ROOT; };
+		39C1F3671907F62E00819F20 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScanViewController.m; path = small_kangaroo_library/ScanViewController.m; sourceTree = SOURCE_ROOT; };
 		BD845190C8373CD2DDA6414D /* small_kangaroo_library-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "small_kangaroo_library-Info.plist"; sourceTree = "<group>"; };
 		BD84519567BBA2F7D563F107 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD84530631718BEF289A40D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -90,6 +100,7 @@
 				BD845F5AD437C53E17D033B3 /* AppDelegate.h */,
 				BD8454309F5B0D853027C810 /* AppDelegate.m */,
 				BD8458B02638F00BBDDDB8CD /* Images.xcassets */,
+				BD845C3398F345676D46202F /* Controller */,
 			);
 			path = small_kangaroo_library;
 			sourceTree = "<group>";
@@ -120,6 +131,19 @@
 				BD8452BF264C7333CF2206D0 /* small_kangaroo_library */,
 				BD8453D35F0B7C4C45486C4D /* small_kangaroo_libraryTests */,
 			);
+			sourceTree = "<group>";
+		};
+		BD845C3398F345676D46202F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39C1F3661907F62E00819F20 /* ScanViewController.h */,
+				39C1F3671907F62E00819F20 /* ScanViewController.m */,
+				39243D3E19091A4A00F25B7C /* ScanViewController.xib */,
+				39243D4019091A8300F25B7C /* ScanPreparationViewController.h */,
+				39243D4119091A8300F25B7C /* ScanPreparationViewController.m */,
+				39243D4219091A8300F25B7C /* ScanPreparationViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		BD845C3B452356122CF3B151 /* Supporting Files */ = {
@@ -213,6 +237,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39243D3F19091A4A00F25B7C /* ScanViewController.xib in Resources */,
+				39243D4419091A8300F25B7C /* ScanPreparationViewController.xib in Resources */,
 				BD8456B2161CF02F90BD78B9 /* InfoPlist.strings in Resources */,
 				BD845FC75CAEC3DC37E87FA1 /* Images.xcassets in Resources */,
 			);
@@ -242,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD845570B556CC337218730C /* main.m in Sources */,
+				39C1F3691907F62E00819F20 /* ScanViewController.m in Sources */,
 				BD845308E3EAC54BD22957B6 /* AppDelegate.m in Sources */,
+				39243D4319091A8300F25B7C /* ScanPreparationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +449,7 @@
 				BD8459775EE0B19CDDA3E1B1 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD845BECB9F185C6C3063990 /* Build configuration list for PBXNativeTarget "small_kangaroo_libraryTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +458,7 @@
 				BD845F350C5540D0A79312BD /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

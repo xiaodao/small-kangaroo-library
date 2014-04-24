@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1EF09649-173D-4A74-836C-98A6BBE062AB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>small_kangaroo_library</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AE6704AD-14D5-40D7-B315-471D96B8848D</key>
+		<string>https://github.com/xiaodao/small-kangaroo-library.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>small_kangaroo_library.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AE6704AD-14D5-40D7-B315-471D96B8848D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/xiaodao/small-kangaroo-library.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AE6704AD-14D5-40D7-B315-471D96B8848D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AE6704AD-14D5-40D7-B315-471D96B8848D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>small_kangaroo_library</string>
+		</dict>
+	</array>
+</dict>
+</plist>
