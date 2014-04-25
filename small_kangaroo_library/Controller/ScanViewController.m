@@ -11,7 +11,7 @@
 #import <AVFoundation/AVCaptureDevice.h>
 #import <AVFoundation/AVCaptureVideoPreviewLayer.h>
 #import <AVFoundation/AVMetadataObject.h>
-
+#import "Masonry.h"
 #import "ScanViewController.h"
 
 @interface ScanViewController () <AVCaptureMetadataOutputObjectsDelegate>
@@ -20,6 +20,8 @@
 @property(nonatomic, strong) AVCaptureDeviceInput *input;
 @property(nonatomic, strong) AVCaptureMetadataOutput *output;
 @property(nonatomic, strong) AVCaptureVideoPreviewLayer *prevLayer;
+@property(strong, nonatomic) UIView *borderedView;
+@property(strong, nonatomic) UILabel *tipLabel;
 @end
 
 @implementation ScanViewController
@@ -57,7 +59,33 @@
   _prevLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
   [self.view.layer addSublayer:_prevLayer];
 
+  self.borderedView = UIView.new;
+  self.borderedView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+  self.borderedView.layer.borderWidth = 1.0f;
+  [self.view addSubview:self.borderedView];
+
+  self.tipLabel = [[UILabel alloc] init];
+  self.tipLabel.text = @"将条形码放入框内，即可自动扫描";
+  self.tipLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
+  self.tipLabel.textColor = [UIColor whiteColor];
+  self.tipLabel.numberOfLines = 1;
+  [self.view addSubview:self.tipLabel];
   [_session startRunning];
+  [self layout];
+}
+
+- (void)layout {
+  [self.borderedView mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.width.equalTo(@200);
+    make.centerX.equalTo(self.view.mas_centerX);
+    make.height.equalTo(@200);
+    make.centerY.equalTo(self.view.mas_centerY);
+  }];
+
+  [self.tipLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
+    maker.top.equalTo(self.borderedView.mas_bottom).with.offset(10);
+    maker.centerX.equalTo(self.view.mas_centerX);
+  }];
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
@@ -77,7 +105,6 @@
     if (detectionString != nil) {
       NSLog(@"ISBN: %@", detectionString);
       [_session stopRunning];
-//      [self.presentingViewController dismissViewControllerAnimated:YES completion:^{}];
       break;
     }
   }
