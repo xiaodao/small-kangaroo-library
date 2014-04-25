@@ -19,7 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-     self.navigationItem.title = @"添加书籍";
+     self.navigationItem.title = @"小袋鼠";
     }
     return self;
 }
@@ -37,6 +37,6 @@
 
 - (IBAction)scan:(id)sender {
   ScanViewController *scanViewController = [[ScanViewController alloc] init];
-  [self.navigationController presentViewController:scanViewController animated:NO completion:^{}];
+  [self.navigationController pushViewController:scanViewController animated:YES];
 }
 @end

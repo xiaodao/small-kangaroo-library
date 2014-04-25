@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3686730D76D84BF300F20DFD /* ScanPreparationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */; };
 		3686731F9DD7A62AC22C16B6 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A58CC24F0CF460A0D32 /* ScanViewController.m */; };
-		368679B178D94CBCE579FD8A /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3686755FBA6408D216E0CB38 /* ScanViewController.xib */; };
 		36867E85E10E738930C56BF3 /* ScanPreparationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */; };
 		BD845030A183CB8FCCBAB1DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84519567BBA2F7D563F107 /* Foundation.framework */; };
 		BD845308E3EAC54BD22957B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8454309F5B0D853027C810 /* AppDelegate.m */; };
@@ -37,7 +36,6 @@
 
 /* Begin PBXFileReference section */
 		3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanPreparationViewController.xib; sourceTree = "<group>"; };
-		3686755FBA6408D216E0CB38 /* ScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
 		36867A1690C7F3003B9BCA30 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanPreparationViewController.m; sourceTree = "<group>"; };
 		36867A58CC24F0CF460A0D32 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */,
 				36867A1690C7F3003B9BCA30 /* ScanViewController.h */,
 				36867A58CC24F0CF460A0D32 /* ScanViewController.m */,
-				3686755FBA6408D216E0CB38 /* ScanViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -245,7 +242,6 @@
 				BD8456B2161CF02F90BD78B9 /* InfoPlist.strings in Resources */,
 				BD845FC75CAEC3DC37E87FA1 /* Images.xcassets in Resources */,
 				3686730D76D84BF300F20DFD /* ScanPreparationViewController.xib in Resources */,
-				368679B178D94CBCE579FD8A /* ScanViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
