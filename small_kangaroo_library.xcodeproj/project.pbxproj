@@ -10,6 +10,7 @@
 		3686730D76D84BF300F20DFD /* ScanPreparationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */; };
 		3686731F9DD7A62AC22C16B6 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A58CC24F0CF460A0D32 /* ScanViewController.m */; };
 		36867E85E10E738930C56BF3 /* ScanPreparationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */; };
+		496AE96A190A7757000C4500 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496AE969190A7757000C4500 /* AVFoundation.framework */; };
 		BD845030A183CB8FCCBAB1DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84519567BBA2F7D563F107 /* Foundation.framework */; };
 		BD845308E3EAC54BD22957B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8454309F5B0D853027C810 /* AppDelegate.m */; };
 		BD8454F11CD5727CE763AE54 /* small_kangaroo_libraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD845E26717604299EB03F72 /* small_kangaroo_libraryTests.m */; };
@@ -22,6 +23,7 @@
 		BD845AC09A4064C057938681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84519567BBA2F7D563F107 /* Foundation.framework */; };
 		BD845E992071FD4047520B76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84530631718BEF289A40D3 /* UIKit.framework */; };
 		BD845FC75CAEC3DC37E87FA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8458B02638F00BBDDDB8CD /* Images.xcassets */; };
+		DE0EAC761C2B450F84C83B04 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B87C0B48F7F4DFEA5A9CEA3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B87C0B48F7F4DFEA5A9CEA3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanPreparationViewController.xib; sourceTree = "<group>"; };
 		36867A1690C7F3003B9BCA30 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanPreparationViewController.m; sourceTree = "<group>"; };
 		36867A58CC24F0CF460A0D32 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		36867E4697848EC53A5FC29F /* ScanPreparationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanPreparationViewController.h; sourceTree = "<group>"; };
+		496AE969190A7757000C4500 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		60CA0B27BA02405587AFDF95 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		BD845190C8373CD2DDA6414D /* small_kangaroo_library-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "small_kangaroo_library-Info.plist"; sourceTree = "<group>"; };
 		BD84519567BBA2F7D563F107 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD84530631718BEF289A40D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -63,9 +68,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496AE96A190A7757000C4500 /* AVFoundation.framework in Frameworks */,
 				BD845AC09A4064C057938681 /* Foundation.framework in Frameworks */,
 				BD8455BB7595EB994FD48145 /* CoreGraphics.framework in Frameworks */,
 				BD845A7DA90663160B7656D7 /* UIKit.framework in Frameworks */,
+				DE0EAC761C2B450F84C83B04 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +135,7 @@
 				BD845DAB04DE766AE4FB10D1 /* Frameworks */,
 				BD8452BF264C7333CF2206D0 /* small_kangaroo_library */,
 				BD8453D35F0B7C4C45486C4D /* small_kangaroo_libraryTests */,
+				60CA0B27BA02405587AFDF95 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,10 +165,12 @@
 		BD845DAB04DE766AE4FB10D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				496AE969190A7757000C4500 /* AVFoundation.framework */,
 				BD84519567BBA2F7D563F107 /* Foundation.framework */,
 				BD84546B6AEA7C7B33110CEA /* CoreGraphics.framework */,
 				BD84530631718BEF289A40D3 /* UIKit.framework */,
 				BD8457303D9F4958DB3C1BC6 /* XCTest.framework */,
+				2B87C0B48F7F4DFEA5A9CEA3 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD8453BFA561E4A938648128 /* Build configuration list for PBXNativeTarget "small_kangaroo_library" */;
 			buildPhases = (
+				841107CDDABC4F678B972F38 /* Check Pods Manifest.lock */,
 				BD845D76D6E59376EB20B34E /* Sources */,
 				BD84550CB9BE82E56E1A0E6B /* Frameworks */,
 				BD8452AB2F19F3369C24BA4B /* Resources */,
+				6D168A535E0B43829D63270C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +266,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D168A535E0B43829D63270C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		841107CDDABC4F678B972F38 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD845CEF573B0E789EA54340 /* Sources */ = {
@@ -354,6 +399,7 @@
 		};
 		BD8459775EE0B19CDDA3E1B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60CA0B27BA02405587AFDF95 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -370,6 +416,7 @@
 		};
 		BD845A288BDF0821BDBCABCF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60CA0B27BA02405587AFDF95 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
