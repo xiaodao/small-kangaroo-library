@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3686730D76D84BF300F20DFD /* ScanPreparationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */; };
 		3686731F9DD7A62AC22C16B6 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A58CC24F0CF460A0D32 /* ScanViewController.m */; };
+		3686743988818030A99A37E7 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 368679A725E8F47392618B13 /* Book.m */; };
 		36867E85E10E738930C56BF3 /* ScanPreparationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */; };
 		496AE96A190A7757000C4500 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496AE969190A7757000C4500 /* AVFoundation.framework */; };
 		BD845030A183CB8FCCBAB1DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD84519567BBA2F7D563F107 /* Foundation.framework */; };
@@ -39,9 +40,11 @@
 /* Begin PBXFileReference section */
 		2B87C0B48F7F4DFEA5A9CEA3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanPreparationViewController.xib; sourceTree = "<group>"; };
+		368679A725E8F47392618B13 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		36867A1690C7F3003B9BCA30 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanPreparationViewController.m; sourceTree = "<group>"; };
 		36867A58CC24F0CF460A0D32 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		36867C259A473CF71707C6C7 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		36867E4697848EC53A5FC29F /* ScanPreparationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanPreparationViewController.h; sourceTree = "<group>"; };
 		496AE969190A7757000C4500 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		60CA0B27BA02405587AFDF95 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -89,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3686722B7F494F8AB336A08A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				368679A725E8F47392618B13 /* Book.m */,
+				36867C259A473CF71707C6C7 /* Book.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BD8450393BD0081CC7614ADC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +118,7 @@
 				BD8454309F5B0D853027C810 /* AppDelegate.m */,
 				BD8458B02638F00BBDDDB8CD /* Images.xcassets */,
 				BD845C3398F345676D46202F /* Controller */,
+				3686722B7F494F8AB336A08A /* Model */,
 			);
 			path = small_kangaroo_library;
 			sourceTree = "<group>";
@@ -317,6 +330,7 @@
 				BD845308E3EAC54BD22957B6 /* AppDelegate.m in Sources */,
 				36867E85E10E738930C56BF3 /* ScanPreparationViewController.m in Sources */,
 				3686731F9DD7A62AC22C16B6 /* ScanViewController.m in Sources */,
+				3686743988818030A99A37E7 /* Book.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,8 +13,14 @@
 #import <AVFoundation/AVMetadataObject.h>
 #import "Masonry.h"
 #import "ScanViewController.h"
+#import "Book.h"
+
+#define DOUBAN_ISBN_URL @"http://api.douban.com/v2/book/isbn/"
+
 
 @interface ScanViewController () <AVCaptureMetadataOutputObjectsDelegate>
+@property(nonatomic, retain) NSOperationQueue *queue;
+
 @property(nonatomic, strong) AVCaptureSession *session;
 @property(nonatomic, strong) AVCaptureDevice *device;
 @property(nonatomic, strong) AVCaptureDeviceInput *input;
@@ -36,6 +42,8 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+
+  self.queue=[[NSOperationQueue alloc] init];
 
   _session = [[AVCaptureSession alloc] init];
   _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -105,7 +113,38 @@
     if (detectionString != nil) {
       NSLog(@"ISBN: %@", detectionString);
       [_session stopRunning];
+      [self getBookDetails:detectionString];
       break;
+    }
+  }
+}
+
+- (void)getBookDetails:(NSString *)isbn {
+  NSURL *bookUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", DOUBAN_ISBN_URL, isbn]];
+  NSLog(@"Started to get book details: %@ ", bookUrl);
+
+  NSURLRequest *request = [NSURLRequest requestWithURL:bookUrl cachePolicy:NSURLCacheStorageNotAllowed timeoutInterval:7.0f];
+
+  [NSURLConnection sendAsynchronousRequest:request queue:self.queue completionHandler:^(NSURLResponse *res, NSData *data, NSError *error) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self getBookDetailCallback:error withData:data isbn:isbn ];
+    });
+  }];
+}
+
+- (void)getBookDetailCallback:(NSError *)error withData:(NSData *)data isbn:(NSString *)isbn {
+  if(data==nil || error!=nil){
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"错误" message:@"连接网络失败了" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
+  }else{
+    NSLog(@"Get data from douban");
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    if([json valueForKey:@"msg"]==nil){
+      Book *book = [Book newFromJson:json andIsbn:isbn];
+      NSLog(@"%@", book);
+    }else{
+      UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"错误" message:@"没有找到这本书" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+      [alert show];
     }
   }
 }
