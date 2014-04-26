@@ -21,11 +21,15 @@
 
   ScanPreparationViewController *scanPreparationViewController = [[ScanPreparationViewController alloc] init];
   UINavigationController *mainController = [[UINavigationController alloc] initWithRootViewController:scanPreparationViewController];
-  // Override point for customization after application launch.
   self.window.rootViewController = mainController;
   self.window.backgroundColor = [UIColor whiteColor];
   [self.window makeKeyAndVisible];
   return YES;
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+  DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"dropboxAccountLinkResult" object:account userInfo:@{}];
+  return YES;
+}
 @end

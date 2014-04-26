@@ -11,6 +11,7 @@
 #import <AVFoundation/AVCaptureDevice.h>
 #import <AVFoundation/AVCaptureVideoPreviewLayer.h>
 #import <AVFoundation/AVMetadataObject.h>
+#import <Dropbox/Dropbox.h>
 #import "Masonry.h"
 #import "ScanViewController.h"
 #import "ScanFinishedDelegate.h"
@@ -25,6 +26,7 @@
 @property(strong, nonatomic) UIView *borderedView;
 @property(strong, nonatomic) UILabel *tipLabel;
 @property(strong, nonatomic) ScanFinishedDelegate *scanDelegate;
+@property(strong, nonatomic) NSString *isbn;
 
 @end
 
@@ -113,10 +115,27 @@
 
     if (detectionString != nil) {
       NSLog(@"ISBN: %@", detectionString);
+      self.isbn = detectionString;
       [_session stopRunning];
-      [self.scanDelegate scanFinished:detectionString];
+      DBAccount *account = [[DBAccountManager sharedManager] linkedAccount];
+      if (account) {
+        [self.scanDelegate scanFinished:self.isbn];
+      } else {
+        [[DBAccountManager sharedManager] linkFromController:self];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dropboxAccountLinked:) name:@"dropboxAccountLinkResult" object:nil];
+      }
       break;
     }
+  }
+}
+
+- (void)dropboxAccountLinked:(NSNotification *)notification {
+  DBAccount *account = notification.object;
+  if (account) {
+    [self.scanDelegate scanFinished:self.isbn];
+  } else {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" message:@"无法保存数据，请重新扫描并登录dropbox" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
   }
 }
 
