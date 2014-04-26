@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 SmallKangarooLibrary. All rights reserved.
 //
 
+#import <Dropbox/Dropbox.h>
 #import "AppDelegate.h"
 #import "ScanPreparationViewController.h"
 
@@ -13,6 +14,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+  DBAccountManager *mgr =
+          [[DBAccountManager alloc] initWithAppKey:@"34imuqk9n328tee" secret:@"fzhw7s9me85uo8g"];
+  [DBAccountManager setSharedManager:mgr];
+
   ScanPreparationViewController *scanPreparationViewController = [[ScanPreparationViewController alloc] init];
   UINavigationController *mainController = [[UINavigationController alloc] initWithRootViewController:scanPreparationViewController];
   // Override point for customization after application launch.
