@@ -11,6 +11,8 @@
 		3686730D76D84BF300F20DFD /* ScanPreparationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */; };
 		3686731F9DD7A62AC22C16B6 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A58CC24F0CF460A0D32 /* ScanViewController.m */; };
 		3686743988818030A99A37E7 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 368679A725E8F47392618B13 /* Book.m */; };
+		3686782B5A8F185DDAB699A9 /* BookAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3686774DC65046A67B82D2CA /* BookAddView.m */; };
+		368678E8DDD53760BB9794EC /* BookAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867F7A8DC5BF49AF5AC217 /* BookAddViewController.m */; };
 		36867B759E8F71B836A55790 /* DropBoxClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 368673B88CB9D17C9F201B78 /* DropBoxClient.m */; };
 		36867C5D3BE69BF1FA9F9546 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 368671C26DF8D1354687AEC7 /* LoadingView.m */; };
 		36867E85E10E738930C56BF3 /* ScanPreparationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */; };
@@ -53,14 +55,18 @@
 		3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanPreparationViewController.xib; sourceTree = "<group>"; };
 		368673B88CB9D17C9F201B78 /* DropBoxClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBoxClient.m; sourceTree = "<group>"; };
 		3686750AB6F5271A148A221A /* DropBoxClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBoxClient.h; sourceTree = "<group>"; };
+		3686774DC65046A67B82D2CA /* BookAddView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookAddView.m; sourceTree = "<group>"; };
 		368679A725E8F47392618B13 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		36867A1690C7F3003B9BCA30 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanPreparationViewController.m; sourceTree = "<group>"; };
 		36867A58CC24F0CF460A0D32 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		36867C259A473CF71707C6C7 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		36867C2ABF5A79018EB9D359 /* DoubanClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanClient.m; sourceTree = "<group>"; };
+		36867E247B6DAF9BA2664D67 /* BookAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookAddViewController.h; sourceTree = "<group>"; };
 		36867E4697848EC53A5FC29F /* ScanPreparationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanPreparationViewController.h; sourceTree = "<group>"; };
 		36867EC309A0BC459D181DD0 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		36867F7A8DC5BF49AF5AC217 /* BookAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookAddViewController.m; sourceTree = "<group>"; };
+		36867F8125217029398B4689 /* BookAddView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookAddView.h; sourceTree = "<group>"; };
 		496AE969190A7757000C4500 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		49C92809190BEB420073C7F4 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
 		49C9280B190BEB6A0073C7F4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -133,6 +139,8 @@
 			children = (
 				368671C26DF8D1354687AEC7 /* LoadingView.m */,
 				36867EC309A0BC459D181DD0 /* LoadingView.h */,
+				3686774DC65046A67B82D2CA /* BookAddView.m */,
+				36867F8125217029398B4689 /* BookAddView.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,6 +209,8 @@
 				3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */,
 				36867A1690C7F3003B9BCA30 /* ScanViewController.h */,
 				36867A58CC24F0CF460A0D32 /* ScanViewController.m */,
+				36867F7A8DC5BF49AF5AC217 /* BookAddViewController.m */,
+				36867E247B6DAF9BA2664D67 /* BookAddViewController.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -381,6 +391,8 @@
 				3686728DCDD6BFC314EDEADF /* DoubanClient.m in Sources */,
 				36867B759E8F71B836A55790 /* DropBoxClient.m in Sources */,
 				36867C5D3BE69BF1FA9F9546 /* LoadingView.m in Sources */,
+				368678E8DDD53760BB9794EC /* BookAddViewController.m in Sources */,
+				3686782B5A8F185DDAB699A9 /* BookAddView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

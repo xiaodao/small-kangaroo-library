@@ -17,6 +17,7 @@
 #import "DoubanClient.h"
 #import "Book.h"
 #import "LoadingView.h"
+#import "BookAddViewController.h"
 
 @interface ScanViewController () <AVCaptureMetadataOutputObjectsDelegate>
 
@@ -147,19 +148,20 @@
 - (void)getBookFromDouban {
   [self showLoadingView];
   [self.doubanClient retrieveBookBy:self.isbn
-                            success:^(Book *book) {
-//                              [self.view hideLoading];
-                              NSLog(@"%@", book);
-                            }
-                            failure:^(NSString *message) {
-                              UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-                              [alert show];
-                            }
+      success:^(Book *book) {
+        BookAddViewController *bookAddViewController = [[BookAddViewController alloc] initWithBook:book];
+        [self.navigationController pushViewController:bookAddViewController animated:YES];
+        NSLog(@"%@", book);
+      }
+      failure:^(NSString *message) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+      }
   ];
 }
 
 - (void)showLoadingView {
-  LoadingView *loadingView = [[LoadingView alloc]init];
+  LoadingView *loadingView = [[LoadingView alloc] init];
   [self.view addSubview:loadingView];
   [loadingView mas_makeConstraints:^(MASConstraintMaker *maker) {
     maker.top.equalTo(self.borderedView.mas_top);
