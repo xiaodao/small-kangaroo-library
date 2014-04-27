@@ -14,7 +14,9 @@
 #import <Dropbox/Dropbox.h>
 #import "Masonry.h"
 #import "ScanViewController.h"
-#import "ScanFinishedDelegate.h"
+#import "DoubanClient.h"
+#import "Book.h"
+#import "LoadingView.h"
 
 @interface ScanViewController () <AVCaptureMetadataOutputObjectsDelegate>
 
@@ -25,7 +27,7 @@
 @property(nonatomic, strong) AVCaptureVideoPreviewLayer *prevLayer;
 @property(strong, nonatomic) UIView *borderedView;
 @property(strong, nonatomic) UILabel *tipLabel;
-@property(strong, nonatomic) ScanFinishedDelegate *scanDelegate;
+@property(strong, nonatomic) DoubanClient *doubanClient;
 @property(strong, nonatomic) NSString *isbn;
 
 @end
@@ -35,7 +37,7 @@
 - (id)init {
   self = [super init];
   if (self) {
-    self.scanDelegate = [[ScanFinishedDelegate alloc] init];
+    self.doubanClient = [[DoubanClient alloc] init];
   }
 
   return self;
@@ -114,29 +116,57 @@
     }
 
     if (detectionString != nil) {
-      NSLog(@"ISBN: %@", detectionString);
       self.isbn = detectionString;
       [_session stopRunning];
-      DBAccount *account = [[DBAccountManager sharedManager] linkedAccount];
-      if (account) {
-        [self.scanDelegate scanFinished:self.isbn];
-      } else {
-        [[DBAccountManager sharedManager] linkFromController:self];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dropboxAccountLinked:) name:@"dropboxAccountLinkResult" object:nil];
-      }
+      [self scanFinished];
       break;
     }
+  }
+}
+
+- (void)scanFinished {
+  DBAccount *account = [[DBAccountManager sharedManager] linkedAccount];
+  if (account) {
+    [self getBookFromDouban];
+  } else {
+    [[DBAccountManager sharedManager] linkFromController:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dropboxAccountLinked:) name:@"dropboxAccountLinkResult" object:nil];
   }
 }
 
 - (void)dropboxAccountLinked:(NSNotification *)notification {
   DBAccount *account = notification.object;
   if (account) {
-    [self.scanDelegate scanFinished:self.isbn];
+    [self getBookFromDouban];
   } else {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" message:@"无法保存数据，请重新扫描并登录dropbox" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     [alert show];
   }
+}
+
+- (void)getBookFromDouban {
+  [self showLoadingView];
+  [self.doubanClient retrieveBookBy:self.isbn
+                            success:^(Book *book) {
+//                              [self.view hideLoading];
+                              NSLog(@"%@", book);
+                            }
+                            failure:^(NSString *message) {
+                              UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                              [alert show];
+                            }
+  ];
+}
+
+- (void)showLoadingView {
+  LoadingView *loadingView = [[LoadingView alloc]init];
+  [self.view addSubview:loadingView];
+  [loadingView mas_makeConstraints:^(MASConstraintMaker *maker) {
+    maker.top.equalTo(self.borderedView.mas_top);
+    maker.bottom.equalTo(self.borderedView.mas_bottom);
+    maker.right.equalTo(self.borderedView.mas_right);
+    maker.left.equalTo(self.borderedView.mas_left);
+  }];
 }
 
 @end

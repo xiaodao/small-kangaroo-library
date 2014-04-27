@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3686728DCDD6BFC314EDEADF /* ScanFinishedDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867C2ABF5A79018EB9D359 /* ScanFinishedDelegate.m */; };
+		3686728DCDD6BFC314EDEADF /* DoubanClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867C2ABF5A79018EB9D359 /* DoubanClient.m */; };
 		3686730D76D84BF300F20DFD /* ScanPreparationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */; };
 		3686731F9DD7A62AC22C16B6 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A58CC24F0CF460A0D32 /* ScanViewController.m */; };
 		3686743988818030A99A37E7 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 368679A725E8F47392618B13 /* Book.m */; };
 		36867B759E8F71B836A55790 /* DropBoxClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 368673B88CB9D17C9F201B78 /* DropBoxClient.m */; };
+		36867C5D3BE69BF1FA9F9546 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 368671C26DF8D1354687AEC7 /* LoadingView.m */; };
 		36867E85E10E738930C56BF3 /* ScanPreparationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */; };
 		496AE96A190A7757000C4500 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496AE969190A7757000C4500 /* AVFoundation.framework */; };
 		49C9280A190BEB420073C7F4 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C92809190BEB420073C7F4 /* Dropbox.framework */; };
@@ -47,7 +48,8 @@
 
 /* Begin PBXFileReference section */
 		2B87C0B48F7F4DFEA5A9CEA3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3686710E96DB395BBA903759 /* ScanFinishedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanFinishedDelegate.h; sourceTree = "<group>"; };
+		3686710E96DB395BBA903759 /* DoubanClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanClient.h; sourceTree = "<group>"; };
+		368671C26DF8D1354687AEC7 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanPreparationViewController.xib; sourceTree = "<group>"; };
 		368673B88CB9D17C9F201B78 /* DropBoxClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBoxClient.m; sourceTree = "<group>"; };
 		3686750AB6F5271A148A221A /* DropBoxClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBoxClient.h; sourceTree = "<group>"; };
@@ -56,8 +58,9 @@
 		36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanPreparationViewController.m; sourceTree = "<group>"; };
 		36867A58CC24F0CF460A0D32 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		36867C259A473CF71707C6C7 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
-		36867C2ABF5A79018EB9D359 /* ScanFinishedDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanFinishedDelegate.m; sourceTree = "<group>"; };
+		36867C2ABF5A79018EB9D359 /* DoubanClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanClient.m; sourceTree = "<group>"; };
 		36867E4697848EC53A5FC29F /* ScanPreparationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanPreparationViewController.h; sourceTree = "<group>"; };
+		36867EC309A0BC459D181DD0 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		496AE969190A7757000C4500 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		49C92809190BEB420073C7F4 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
 		49C9280B190BEB6A0073C7F4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -125,6 +128,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		36867A2C210FB8A37AEA3631 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				368671C26DF8D1354687AEC7 /* LoadingView.m */,
+				36867EC309A0BC459D181DD0 /* LoadingView.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BD8450393BD0081CC7614ADC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,10 +155,11 @@
 				BD8458B02638F00BBDDDB8CD /* Images.xcassets */,
 				BD845C3398F345676D46202F /* Controller */,
 				3686722B7F494F8AB336A08A /* Model */,
-				36867C2ABF5A79018EB9D359 /* ScanFinishedDelegate.m */,
-				3686710E96DB395BBA903759 /* ScanFinishedDelegate.h */,
+				36867C2ABF5A79018EB9D359 /* DoubanClient.m */,
+				3686710E96DB395BBA903759 /* DoubanClient.h */,
 				368673B88CB9D17C9F201B78 /* DropBoxClient.m */,
 				3686750AB6F5271A148A221A /* DropBoxClient.h */,
+				36867A2C210FB8A37AEA3631 /* View */,
 			);
 			path = small_kangaroo_library;
 			sourceTree = "<group>";
@@ -365,8 +378,9 @@
 				36867E85E10E738930C56BF3 /* ScanPreparationViewController.m in Sources */,
 				3686731F9DD7A62AC22C16B6 /* ScanViewController.m in Sources */,
 				3686743988818030A99A37E7 /* Book.m in Sources */,
-				3686728DCDD6BFC314EDEADF /* ScanFinishedDelegate.m in Sources */,
+				3686728DCDD6BFC314EDEADF /* DoubanClient.m in Sources */,
 				36867B759E8F71B836A55790 /* DropBoxClient.m in Sources */,
+				36867C5D3BE69BF1FA9F9546 /* LoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

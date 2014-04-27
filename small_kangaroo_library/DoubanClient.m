@@ -1,16 +1,15 @@
-#import "ScanFinishedDelegate.h"
+#import "DoubanClient.h"
 #import "Book.h"
-#import "DropBoxClient.h"
 
 #define DOUBAN_ISBN_URL @"http://api.douban.com/v2/book/isbn/"
 
-@interface ScanFinishedDelegate ()
+@interface DoubanClient ()
 
 @property(nonatomic, retain) NSOperationQueue *queue;
 
 @end
 
-@implementation ScanFinishedDelegate {
+@implementation DoubanClient {
 
 }
 
@@ -22,35 +21,31 @@
   return self;
 }
 
-- (void)scanFinished:(NSString *)isbn {
+- (void)retrieveBookBy:(NSString *)isbn success:(void (^)(Book *book))success failure:(void (^)(NSString *failureMessage))failure {
   NSURL *bookUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", DOUBAN_ISBN_URL, isbn]];
   NSLog(@"Started to get book details: %@ ", bookUrl);
-
   NSURLRequest *request = [NSURLRequest requestWithURL:bookUrl cachePolicy:NSURLCacheStorageNotAllowed timeoutInterval:7.0f];
 
   [NSURLConnection sendAsynchronousRequest:request queue:self.queue completionHandler:^(NSURLResponse *res, NSData *data, NSError *error) {
     dispatch_async(dispatch_get_main_queue(), ^{
-      [self getBookDetailCallback:error withData:data isbn:isbn];
+      [self getBookDetailCallback:error withData:data isbn:isbn success:success failure:failure];
     });
   }];
 }
 
-- (void)getBookDetailCallback:(NSError *)error withData:(NSData *)data isbn:(NSString *)isbn {
+- (void)getBookDetailCallback:(NSError *)error withData:(NSData *)data isbn:(NSString *)isbn
+                      success:(void (^)(Book *book))success
+                      failure:(void (^)(NSString *failureMessage))failure {
   if (data == nil || error != nil) {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" message:@"连接网络失败了" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    [alert show];
+    failure(@"连接网络失败了");
   } else {
     NSLog(@"Get data from douban");
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     if ([json valueForKey:@"msg"] == nil) {
-      NSLog(@"%@", json);
       Book *book = [Book newFromJson:json andIsbn:isbn];
-      NSLog(@"%@", book);
-      [[DropBoxClient sharedApiClient] insert:book];
+      success(book);
     } else {
-      NSLog(@"%@", json);
-      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" message:@"没有找到这本书" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-      [alert show];
+      failure(@"没有找到这本书");
     }
   }
 }
