@@ -11,6 +11,7 @@
 		3686730D76D84BF300F20DFD /* ScanPreparationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */; };
 		3686731F9DD7A62AC22C16B6 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A58CC24F0CF460A0D32 /* ScanViewController.m */; };
 		3686743988818030A99A37E7 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 368679A725E8F47392618B13 /* Book.m */; };
+		36867B759E8F71B836A55790 /* DropBoxClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 368673B88CB9D17C9F201B78 /* DropBoxClient.m */; };
 		36867E85E10E738930C56BF3 /* ScanPreparationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */; };
 		496AE96A190A7757000C4500 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496AE969190A7757000C4500 /* AVFoundation.framework */; };
 		49C9280A190BEB420073C7F4 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C92809190BEB420073C7F4 /* Dropbox.framework */; };
@@ -48,6 +49,8 @@
 		2B87C0B48F7F4DFEA5A9CEA3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3686710E96DB395BBA903759 /* ScanFinishedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanFinishedDelegate.h; sourceTree = "<group>"; };
 		3686726F9B75012751FA1719 /* ScanPreparationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanPreparationViewController.xib; sourceTree = "<group>"; };
+		368673B88CB9D17C9F201B78 /* DropBoxClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBoxClient.m; sourceTree = "<group>"; };
+		3686750AB6F5271A148A221A /* DropBoxClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBoxClient.h; sourceTree = "<group>"; };
 		368679A725E8F47392618B13 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		36867A1690C7F3003B9BCA30 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		36867A2D518BC06EF2F827F0 /* ScanPreparationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanPreparationViewController.m; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				3686722B7F494F8AB336A08A /* Model */,
 				36867C2ABF5A79018EB9D359 /* ScanFinishedDelegate.m */,
 				3686710E96DB395BBA903759 /* ScanFinishedDelegate.h */,
+				368673B88CB9D17C9F201B78 /* DropBoxClient.m */,
+				3686750AB6F5271A148A221A /* DropBoxClient.h */,
 			);
 			path = small_kangaroo_library;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				3686731F9DD7A62AC22C16B6 /* ScanViewController.m in Sources */,
 				3686743988818030A99A37E7 /* Book.m in Sources */,
 				3686728DCDD6BFC314EDEADF /* ScanFinishedDelegate.m in Sources */,
+				36867B759E8F71B836A55790 /* DropBoxClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

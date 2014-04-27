@@ -1,5 +1,6 @@
 #import "ScanFinishedDelegate.h"
 #import "Book.h"
+#import "DropBoxClient.h"
 
 #define DOUBAN_ISBN_URL @"http://api.douban.com/v2/book/isbn/"
 
@@ -16,7 +17,7 @@
 - (id)init {
   self = [super init];
   if (self) {
-    self.queue=[[NSOperationQueue alloc] init];
+    self.queue = [[NSOperationQueue alloc] init];
   }
   return self;
 }
@@ -45,6 +46,7 @@
       NSLog(@"%@", json);
       Book *book = [Book newFromJson:json andIsbn:isbn];
       NSLog(@"%@", book);
+      [[DropBoxClient sharedApiClient] insert:book];
     } else {
       NSLog(@"%@", json);
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" message:@"没有找到这本书" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];

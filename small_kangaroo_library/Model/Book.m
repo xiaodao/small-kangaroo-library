@@ -33,4 +33,8 @@
   return [NSString stringWithFormat:@"Book: title - %@, isbn - %@, authorIntro - %@, publisher - %@, rating - %@, summary - %@, author - %@",
                                     self.title, self.isbn, self.authorIntro, self.publisher, self.rating, self.summary, self.author];
 }
+
+- (NSString *)donor {
+  return @"李剑";
+}
 @end

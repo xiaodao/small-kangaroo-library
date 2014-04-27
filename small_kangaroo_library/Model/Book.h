@@ -8,6 +8,7 @@
 @property (strong, nonatomic, readonly) NSString *publisher;
 @property (strong, nonatomic, readonly) NSString *rating;
 @property (strong, nonatomic, readonly) NSString *summary;
+@property (strong, nonatomic) NSString *donor;
 
 + (id)newFromJson:(NSDictionary *)jsonDictionary andIsbn:(NSString *)isbn;
 @end
