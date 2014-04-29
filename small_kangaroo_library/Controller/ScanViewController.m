@@ -119,6 +119,7 @@
     if (detectionString != nil) {
       self.isbn = detectionString;
       [_session stopRunning];
+      NSLog(@"scan finished, starting to get data from douban");
       [self scanFinished];
       break;
     }

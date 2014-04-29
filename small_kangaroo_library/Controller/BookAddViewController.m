@@ -1,5 +1,6 @@
 #import "BookAddViewController.h"
 #import "Book.h"
+#import "BookAddView.h"
 
 @interface BookAddViewController ()
 @property(strong, nonatomic) Book *book;
@@ -14,6 +15,11 @@
     self.book = book;
   }
   return self;
+}
+
+- (void)loadView {
+  [super loadView];
+  self.view = [[BookAddView alloc]initWithBook:self.book];
 }
 
 @end
