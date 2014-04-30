@@ -33,7 +33,9 @@
 
 @end
 
-@implementation ScanViewController
+@implementation ScanViewController {
+  BOOL retrievingData;
+}
 
 - (id)init {
   self = [super init];
@@ -127,6 +129,8 @@
 }
 
 - (void)scanFinished {
+  if (retrievingData) return;
+  retrievingData = YES;
   DBAccount *account = [[DBAccountManager sharedManager] linkedAccount];
   if (account) {
     [self getBookFromDouban];
