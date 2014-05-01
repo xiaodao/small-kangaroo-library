@@ -20,6 +20,8 @@
 @property(nonatomic, strong) UITextView *publisherView;
 @property(nonatomic, strong) UILabel *bookSummaryLabel;
 @property(nonatomic, strong) UITextView *bookSummaryView;
+@property(nonatomic, strong) UILabel *donorLabel;
+@property(nonatomic, strong) UITextField *donorField;
 @end
 
 @implementation BookAddView {
@@ -109,6 +111,18 @@
     maker.right.equalTo(self.mas_right).with.offset(-HORIZONTAL_OFFSET);
     maker.height.equalTo(@150);
   }];
+
+  [self.donorLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
+    maker.top.equalTo(self.bookSummaryView.mas_bottom).with.offset(VERTICAL_OFFSET);
+    maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
+  }];
+
+  [self.donorField mas_makeConstraints:^(MASConstraintMaker *maker) {
+    maker.top.equalTo(self.donorLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
+    maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
+    maker.right.equalTo(self.mas_right).with.offset(-HORIZONTAL_OFFSET);
+    maker.height.equalTo(@40);
+  }];
 }
 
 - (void)updateConstraints {
@@ -134,9 +148,10 @@
     maker.height.equalTo(@([self intrinsicContentSize:self.publisherView].height));
   }];
 
-  [self.bookSummaryView mas_updateConstraints:^(MASConstraintMaker *maker) {
+  [self.donorField mas_updateConstraints:^(MASConstraintMaker *maker) {
     maker.bottom.equalTo(self.contentView.mas_bottom).with.offset(-VERTICAL_OFFSET);
   }];
+
 }
 
 - (CGSize)intrinsicContentSize:(UITextView *)textView {
@@ -188,6 +203,11 @@
   self.bookSummaryView = [self textViewWithText:[self.book summary]];
   [self.contentView addSubview:self.bookSummaryView];
 
+  self.donorLabel = [self labelWithTitle:@"捐赠者"];
+  [self.contentView addSubview:self.donorLabel];
+
+  self.donorField = [self textFieldWithText:@""];
+  [self.contentView addSubview:self.donorField];
 }
 
 - (UILabel *)labelWithTitle:(NSString *)title {
@@ -209,4 +229,15 @@
   [view setEditable:NO];
   return view;
 }
+
+- (UITextField *)textFieldWithText:(NSString *)text {
+  UITextField *textField = [[UITextField alloc] init];
+  [[textField layer] setBorderColor:[UIColor blackColor].CGColor];
+  [[textField layer] setBorderWidth:0.6f];
+  [textField setTextColor:[UIColor blackColor]];
+  [textField setFont:[UIFont fontWithName:@"HelveticaNeue" size:16]];
+  [textField setText:text];
+  return textField;
+}
+
 @end
