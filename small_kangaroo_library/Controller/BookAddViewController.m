@@ -4,6 +4,7 @@
 
 @interface BookAddViewController ()
 @property(strong, nonatomic) Book *book;
+@property(nonatomic, strong) BookAddView *bookAddView;
 @end
 
 @implementation BookAddViewController {
@@ -19,7 +20,15 @@
 
 - (void)loadView {
   [super loadView];
-  self.view = [[BookAddView alloc]initWithBook:self.book];
+  self.bookAddView = [[BookAddView alloc]initWithBook:self.book];
+  self.view = self.bookAddView;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+  [self.bookAddView registerForKeyboardNotifications];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+  [[NSNotificationCenter defaultCenter] removeObserver:self.bookAddView];
+}
 @end

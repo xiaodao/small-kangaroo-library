@@ -5,7 +5,7 @@
 #define VERTICAL_OFFSET 15
 #define HORIZONTAL_OFFSET 20
 
-@interface BookAddView ()
+@interface BookAddView () <UITextFieldDelegate>
 @property(nonatomic, strong) Book *book;
 @property(nonatomic, strong) UIScrollView *contentView;
 @property(nonatomic, strong) UILabel *bookNameLabel;
@@ -22,6 +22,10 @@
 @property(nonatomic, strong) UITextView *bookSummaryView;
 @property(nonatomic, strong) UILabel *donorLabel;
 @property(nonatomic, strong) UITextField *donorField;
+@property(nonatomic, strong) UITextField *activeField;
+@property(nonatomic) CGFloat scrollBufferTop;
+@property(nonatomic) CGSize kbSize;
+@property(nonatomic) BOOL alreadyUsedChinese;
 @end
 
 @implementation BookAddView {
@@ -33,14 +37,14 @@
   if (!self) return nil;
   self.book = book;
   self.backgroundColor = [UIColor whiteColor];
+  self.scrollBufferTop = 30;
   [self createElements];
-  [self layout];
+  [self setupConstraints];
   [self layoutSubviews];
-
   return self;
 }
 
-- (void)layout {
+- (void)setupConstraints {
   [self.contentView mas_makeConstraints:^(MASConstraintMaker *maker) {
     maker.edges.equalTo(self);
   }];
@@ -210,6 +214,82 @@
   [self.contentView addSubview:self.donorField];
 }
 
+- (void)registerForKeyboardNotifications {
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(keyboardWasShown:)
+                                               name:UIKeyboardDidShowNotification object:nil];
+
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(keyboardWillBeHidden:)
+                                               name:UIKeyboardWillHideNotification object:nil];
+
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(inputMethodChanged) name:UITextInputCurrentInputModeDidChangeNotification object:nil];
+}
+
+- (void)inputMethodChanged {
+  self.alreadyUsedChinese = [[self.activeField textInputMode].primaryLanguage isEqualToString:@"zhHans"];
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+  self.activeField = textField;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+  self.activeField = nil;
+}
+
+- (void)keyboardWasShown:(NSNotification *)aNotification {
+  NSDictionary *info = [aNotification userInfo];
+  self.kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+  if ([[self.activeField textInputMode].primaryLanguage isEqualToString:@"zh-Hans"] && !self.alreadyUsedChinese) {
+    self.alreadyUsedChinese = YES;
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, self.kbSize.height + 36, 0.0);
+    self.contentView.contentInset = contentInsets;
+    self.contentView.scrollIndicatorInsets = contentInsets;
+  } else {
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, self.kbSize.height, 0.0);
+    self.contentView.contentInset = contentInsets;
+    self.contentView.scrollIndicatorInsets = contentInsets;
+  }
+  [self scrollToVisible:self.activeField];
+}
+
+- (void)scrollToVisible:(UITextField *)editingField {
+  CGFloat topOfField = editingField.frame.origin.y - self.contentView.contentOffset.y;
+  CGFloat __block distanceToScroll = -1;
+  if (topOfField < self.scrollBufferTop) {
+    distanceToScroll = topOfField - self.scrollBufferTop;
+  }
+  else {
+    // check if it's off the bottom
+    CGFloat bottomOfField = editingField.frame.origin.y + editingField.frame.size.height - self.contentView.contentOffset.y;
+    CGFloat bottomOfView = self.contentView.frame.size.height - self.contentView.contentInset.bottom - 5;
+    if (bottomOfField > bottomOfView) {
+      // if it's too big for the screen, align to top
+      CGFloat fieldHeight = editingField.frame.size.height + 30 + 5;
+      CGFloat viewableArea = self.contentView.frame.size.height - self.contentView.contentInset.bottom;
+      if (fieldHeight > viewableArea) {
+        distanceToScroll = topOfField - self.scrollBufferTop;
+      }
+      else {
+        // otherwise just scroll until bottom is visible
+        distanceToScroll = bottomOfField - bottomOfView;
+      }
+    }
+  }
+  if (distanceToScroll != -1) {
+    [UIView animateWithDuration:0.4 animations:^{
+      self.contentView.contentOffset = CGPointMake(0, self.contentView.contentOffset.y + distanceToScroll);
+    }];
+  }
+}
+
+- (void)keyboardWillBeHidden:(NSNotification *)aNotification {
+  UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+  self.contentView.contentInset = contentInsets;
+  self.contentView.scrollIndicatorInsets = contentInsets;
+}
+
 - (UILabel *)labelWithTitle:(NSString *)title {
   UILabel *label = [[UILabel alloc] init];
   [label setText:title];
@@ -237,6 +317,11 @@
   [textField setTextColor:[UIColor blackColor]];
   [textField setFont:[UIFont fontWithName:@"HelveticaNeue" size:16]];
   [textField setText:text];
+  [textField setDelegate:self];
+  UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
+  paddingView.userInteractionEnabled = NO;
+  textField.leftView = paddingView;
+  textField.leftViewMode = UITextFieldViewModeAlways;
   return textField;
 }
 

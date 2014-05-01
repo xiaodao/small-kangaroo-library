@@ -4,4 +4,6 @@
 
 @interface BookAddView : UIView
 - (id)initWithBook:(Book *)book;
+
+- (void)registerForKeyboardNotifications;
 @end
