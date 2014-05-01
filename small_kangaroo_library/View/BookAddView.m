@@ -5,7 +5,7 @@
 #define VERTICAL_OFFSET 15
 #define HORIZONTAL_OFFSET 20
 
-@interface BookAddView () <UITextFieldDelegate>
+@interface BookAddView () <UITextFieldDelegate, UIScrollViewDelegate>
 @property(nonatomic, strong) Book *book;
 @property(nonatomic, strong) UIScrollView *contentView;
 @property(nonatomic, strong) UILabel *bookNameLabel;
@@ -169,6 +169,7 @@
 
 - (void)createElements {
   self.contentView = [[UIScrollView alloc] init];
+  [self.contentView setDelegate:self];
   [self addSubview:self.contentView];
 
   self.bookNameLabel = [self labelWithTitle:@"书名"];
@@ -235,7 +236,17 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
+  [textField resignFirstResponder];
   self.activeField = nil;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [textField resignFirstResponder];
+  return NO;
+}
+
+- (void) scrollViewWillBeginDragging: (UIScrollView *)scrollView{
+  [self.activeField resignFirstResponder];
 }
 
 - (void)keyboardWasShown:(NSNotification *)aNotification {
