@@ -1,4 +1,5 @@
 #import <Dropbox/Dropbox.h>
+#import <ObjectiveSugar/NSArray+ObjectiveSugar.h>
 #import "DropBoxClient.h"
 #import "Book.h"
 
@@ -47,5 +48,11 @@ static DropBoxClient *_sharedInstance;
           @"donor" : book.donor
   }];
   [self.store sync:nil];
+}
+
+- (void)deleteAllRecords {
+  [[self.table query:nil error:nil] each:^(DBRecord *record){
+    [record deleteRecord];
+  }];
 }
 @end

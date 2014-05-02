@@ -6,4 +6,6 @@
 + (DropBoxClient *)sharedApiClient;
 
 - (void)insert:(Book *)book;
+
+- (void)deleteAllRecords;
 @end
