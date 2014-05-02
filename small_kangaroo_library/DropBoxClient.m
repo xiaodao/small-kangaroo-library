@@ -54,5 +54,6 @@ static DropBoxClient *_sharedInstance;
   [[self.table query:nil error:nil] each:^(DBRecord *record){
     [record deleteRecord];
   }];
+  [self.store sync:nil];
 }
 @end
