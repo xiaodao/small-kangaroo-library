@@ -21,7 +21,6 @@
 @property(nonatomic, strong) UILabel *bookSummaryLabel;
 @property(nonatomic, strong) UITextView *bookSummaryView;
 @property(nonatomic, strong) UILabel *donorLabel;
-@property(nonatomic, strong) UITextField *donorField;
 @property(nonatomic, strong) UITextField *activeField;
 @property(nonatomic) CGFloat scrollBufferTop;
 @property(nonatomic) CGSize kbSize;

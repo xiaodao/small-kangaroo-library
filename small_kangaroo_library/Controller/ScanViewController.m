@@ -166,7 +166,7 @@
 }
 
 - (void)showLoadingView {
-  LoadingView *loadingView = [[LoadingView alloc] init];
+  LoadingView *loadingView = [[LoadingView alloc] initWithText:@"已扫描，正在处理" backgroundColor:[UIColor darkGrayColor]];
   [self.view addSubview:loadingView];
   [loadingView mas_makeConstraints:^(MASConstraintMaker *maker) {
     maker.top.equalTo(self.borderedView.mas_top);

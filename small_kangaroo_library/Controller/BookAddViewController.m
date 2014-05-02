@@ -1,6 +1,7 @@
 #import "BookAddViewController.h"
 #import "Book.h"
 #import "BookAddView.h"
+#import "DropBoxClient.h"
 
 @interface BookAddViewController ()<UIAlertViewDelegate>
 @property(strong, nonatomic) Book *book;
@@ -41,7 +42,9 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
   if(buttonIndex == 1){
-    NSLog(@"图书入库");
+    [self.book setDonor:[self.bookAddView.donorField text]];
+    [[DropBoxClient sharedApiClient] insert:self.book];
+    [self.navigationController popToRootViewControllerAnimated:YES];
   }
 }
 

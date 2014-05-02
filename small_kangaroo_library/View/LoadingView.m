@@ -11,11 +11,11 @@
 
 }
 
-- (id)init {
+- (id)initWithText:(NSString *)text backgroundColor:(UIColor *)backgroundColor {
   self = [super init];
   if (!self) return nil;
   self.markView = [[UIView alloc] init];
-  self.markView.backgroundColor = [UIColor darkGrayColor];
+  self.markView.backgroundColor = backgroundColor;
   self.markView.layer.opacity = 0.3f;
   [self addSubview:self.markView];
   [self.markView mas_makeConstraints:^(MASConstraintMaker *maker) {
@@ -39,7 +39,7 @@
   }];
 
   self.loadingLabel = [[UILabel alloc] init];
-  self.loadingLabel.text = @"已扫描，正在处理";
+  self.loadingLabel.text = text;
   self.loadingLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
   self.loadingLabel.textColor = [UIColor whiteColor];
   [self addSubview:self.loadingLabel];
