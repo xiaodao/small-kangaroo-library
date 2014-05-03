@@ -210,7 +210,7 @@
   self.donorLabel = [self labelWithTitle:@"捐赠者"];
   [self.contentView addSubview:self.donorLabel];
 
-  self.donorField = [self textFieldWithText:@""];
+  self.donorField = [self textFieldWithText:[[NSUserDefaults standardUserDefaults] objectForKey:@"donorName"]];
   [self.contentView addSubview:self.donorField];
 }
 

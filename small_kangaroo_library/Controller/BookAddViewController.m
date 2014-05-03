@@ -43,6 +43,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
   if(buttonIndex == 1){
     [self.book setDonor:[self.bookAddView.donorField text]];
+    [[NSUserDefaults standardUserDefaults] setObject:[self.book donor] forKey:@"donorName"];
     [[DropBoxClient sharedApiClient] insert:self.book];
     [self.navigationController popToRootViewControllerAnimated:YES];
   }
