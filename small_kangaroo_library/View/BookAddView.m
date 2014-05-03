@@ -59,8 +59,20 @@
     maker.right.equalTo(self.mas_right).with.offset(-HORIZONTAL_OFFSET);
   }];
 
-  [self.isbnLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
+  [self.donorLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
     maker.top.equalTo(self.bookNameView.mas_bottom).with.offset(VERTICAL_OFFSET);
+    maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
+  }];
+
+  [self.donorField mas_makeConstraints:^(MASConstraintMaker *maker) {
+    maker.top.equalTo(self.donorLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
+    maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
+    maker.right.equalTo(self.mas_right).with.offset(-HORIZONTAL_OFFSET);
+    maker.height.equalTo(@40);
+  }];
+
+  [self.isbnLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
+    maker.top.equalTo(self.donorField.mas_bottom).with.offset(VERTICAL_OFFSET);
     maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
   }];
 
@@ -114,18 +126,6 @@
     maker.right.equalTo(self.mas_right).with.offset(-HORIZONTAL_OFFSET);
     maker.height.equalTo(@150);
   }];
-
-  [self.donorLabel mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.bookSummaryView.mas_bottom).with.offset(VERTICAL_OFFSET);
-    maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
-  }];
-
-  [self.donorField mas_makeConstraints:^(MASConstraintMaker *maker) {
-    maker.top.equalTo(self.donorLabel.mas_bottom).with.offset(VERTICAL_OFFSET);
-    maker.left.equalTo(self).with.offset(HORIZONTAL_OFFSET);
-    maker.right.equalTo(self.mas_right).with.offset(-HORIZONTAL_OFFSET);
-    maker.height.equalTo(@40);
-  }];
 }
 
 - (void)updateConstraints {
@@ -151,7 +151,7 @@
     maker.height.equalTo(@([self intrinsicContentSize:self.publisherView].height));
   }];
 
-  [self.donorField mas_updateConstraints:^(MASConstraintMaker *maker) {
+  [self.bookSummaryView mas_updateConstraints:^(MASConstraintMaker *maker) {
     maker.bottom.equalTo(self.contentView.mas_bottom).with.offset(-VERTICAL_OFFSET);
   }];
 
